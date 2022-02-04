@@ -1,3 +1,5 @@
+import {NextFunction, Request, Response} from "express";
+
 export class ValidationError extends Error {
 
 }
@@ -5,7 +7,7 @@ export class NotFoundError extends Error {
 
 }
 
-export function handleError(err : any ,req : any,res : any,next : any) {
+export function handleError(err : Error ,req : Request,res : Response,next : NextFunction) {
 
 
     if (err instanceof NotFoundError){
