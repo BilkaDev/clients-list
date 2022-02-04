@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerBox{
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+}
+.error{
+    margin: 0 auto;
+    border: red 2px solid;
+    width: 80%;
+    padding: 25px;
+    background-color: #f68e8e;
+}
+body{
+    background-color: #cccbcb;
+
+
+}
+.notes{
+    max-width: 200px;
+}
+.btn{
+    font-size: 1.2em;
+    cursor:pointer;
+    padding: 0.5em 1em;
+    background-color: #17c9a6;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+
+}
+p{
+    margin-bottom: 25px;
+}
+.btn.min{
+    margin: 0.5em 0;
+    font-size: 1em;
+    padding: .2em;
+}
+.btn.min.delete{
+    background-color: #fc9494;
+}
+.btn.min.delete:hover{
+    background-color: #ff0000;
+}
+
+.btn.min.edit{
+    background-color: #2d5981;
+}
+.btn.min.edit:hover{
+    background-color: #1b3b50;
+}
+
+.btn.btn-blue{
+    background-color: #0ac1e0;
+
+}.btn.btn-blue:hover{
+    background-color: #02daff;
+}
+
+.btn:hover{
+    background-color: #02ffd8;
+
+}
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h2{
+    margin: 25px 0;
+}
+
+.content-table,
+.client-table{
+
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.15);
+}
+.content-table thead tr{
+    background-color: #17c9a6;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+.content-table tbody tr{
+    border-bottom: 1px solid #dddd;
+}
+.content-table tbody tr:nth-of-type(even){
+    background-color: rgba(140, 140, 140, 0.2);
+}
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #17c9a6;
+}
+
+
+.client-table th{
+    background-color: #17c9a6;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.client-table th,
+.client-table td{
+    padding: 10px;
+}
+.client-table tr{
+    border-bottom: 1px solid #dddd;
+}
+.client-table tr:nth-of-type(even){
+    background-color: rgba(140, 140, 140, 0.2);
+}
+.client-table tr:last-of-type{
+    border-bottom: 2px solid #17c9a6;
+}

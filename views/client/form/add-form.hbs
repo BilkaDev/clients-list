@@ -1,0 +1,49 @@
+<div class="container">
+    <h2>Add new client to list</h2>
+
+    <form action="/client/" method="POST">
+    <table class="client-table">
+        <tbody>
+        <tr>
+            <th>
+                E-mail:
+            </th>
+            <td>
+                <input type="email" name="email" placeholder="mail@example.com" required>
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Full name:
+            </th>
+            <td>
+                <input type="text" name="name" placeholder="Full name" required>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Next contact date:
+            </th>
+            <td>
+                <input type="date" name="nextContactDate" required>
+
+            </td>
+        </tr>
+            <tr>
+                <th>Details:</th>
+                <td style="word-wrap: break-word" class="notes">
+
+                    <textarea style="resize:vertical; height:200px" name="notes"></textarea>
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+        <button type="submit" class="btn btn-blue">Add</button>
+        {{> go-back}}
+
+    </form>
+
+</div>

@@ -1,0 +1,50 @@
+<div class="container">
+    <h2>ClientRecord {{client.name}}  {{>btn-edit id=client.id}}</h2>
+
+
+
+    <table class="client-table">
+        <tbody>
+            <tr>
+                <th>
+                    E-mail:
+                </th>
+                <td>
+                    <a href="mailto:{{client.email}}" target="_blank">{{client.email}}</a>
+                </td>
+                </tr>
+            <tr>
+                <th>
+                    Full name:
+                </th>
+                <td>
+                    {{client.name}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Next contact date:
+                </th>
+                <td>
+                    {{client.nextContactDate}}
+                </td>
+            </tr>
+            {{#if client.notes}}
+            <tr>
+                    <th>Details:</th>
+                    <td style="word-wrap: break-word" class="notes">
+
+                        <p>{{client.notes}}</p>
+                    </td>
+
+            </tr>
+            {{/if}}
+
+        </tbody>
+    </table>
+
+{{> button-delete id=client.id}}
+
+
+    {{> go-back}}
+</div>

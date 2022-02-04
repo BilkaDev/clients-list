@@ -1,0 +1,49 @@
+<div class="container">
+    <h2>Edit client {{client.name}}</h2>
+
+    <form action="/client/{{client.id}}?_method=PUT" method="POST">
+    <table class="Edit client">
+        <tbody>
+        <tr>
+            <th>
+                E-mail:
+            </th>
+            <td>
+                <input type="email" name="email" required value="{{client.email}}">
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Full name:
+            </th>
+            <td>
+                <input type="text" name="name" required value="{{client.name}}">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Next contact date:
+            </th>
+            <td>
+                <input type="date" required name="nextContactDate" value="{{client.nextContactDate}}">
+
+            </td>
+        </tr>
+            <tr>
+                <th>Details:</th>
+                <td style="word-wrap: break-word" class="notes">
+
+                    <textarea style="resize:vertical; height:200px" name="notes">{{client.notes}}</textarea>
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+        <button type="submit" class="btn btn-blue">Edit</button>
+        {{> go-back}}
+
+    </form>
+
+</div>

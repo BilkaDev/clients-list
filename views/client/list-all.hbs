@@ -1,0 +1,46 @@
+<div class="container">
+    <h2>Client list</h2>
+
+    <table class="content-table">
+        <thead>
+        <tr>
+            <th>
+                E-mail
+            </th>
+            <th>
+                Full name
+            </th>
+            <th>
+                Next contact date
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each clients}}
+            <tr>
+                <td>
+                    <a href="mailto:{{this.email}}" target="_blank">{{this.email}}</a>
+                </td>
+                <td>
+                    {{this.name}}
+                </td>
+                <td>
+                    {{this.nextContactDate}}
+                </td>
+                <td>
+                    {{> btn-details}}
+                    {{> btn-edit}}
+                    {{> button-delete id=this.id}}
+
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+
+        <a class="btn" type="button" href="/client/form/add-form">Add new client</a>
+
+
+</div>
